@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'app',
 
     # Third party
+    'django_cleanup.apps.CleanupConfig',
     'rest_framework',
     'corsheaders',
 ]
@@ -118,6 +119,9 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"] 
 STATIC_ROOT = BASE_DIR / "staticfiles" 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SITE_ID = 1
